@@ -1,0 +1,36 @@
+<!-- Making Internal js for DOM --->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Hello!</h1>
+    <button onclick="hello();">Click Here</button>
+    <hr>
+    <h2>0</h2>
+    <button onclick="count();">Click Here</button>
+</body>
+<script>
+    function hello() {
+        const header = document.querySelector('h1');
+        if (header.innerHTML === 'Hello!') {
+            header.innerHTML = 'Goodbye!';
+        } else {
+            header.innerHTML = 'Hello!';
+        };
+    };
+
+    let counter = 0
+
+    function count() {
+        counter++
+        document.querySelector('h2').innerHTML = counter
+        if (counter % 10 == 0)
+            alert(`count now is ${counter}`);
+    }
+</script>
+
+</html>
